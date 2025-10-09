@@ -1,0 +1,27 @@
+{
+  "name": "02-bases",
+  "version": "0.0.1",
+  "description": "app real con nodejs",
+  "license": "ISC",
+  "author": "Adr1Est",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "echo \"No test script\"",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.0",
+    "nodemon": "^3.1.10",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "get-age": "^1.0.1",
+    "uuid": "^13.0.0",
+    "winston": "^3.18.3"
+  }
+}
