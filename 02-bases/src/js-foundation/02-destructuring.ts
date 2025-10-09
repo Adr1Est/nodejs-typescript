@@ -15,3 +15,4 @@ const characters = ['Flash','Superman', 'Green Lantern', 'Batman'];
 const [ , , ,batman ] = characters;
 
 // console.log(batman);
+export { characters }
