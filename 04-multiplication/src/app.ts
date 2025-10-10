@@ -12,7 +12,10 @@ TABLA DEL ${num}\n
     content += `${num} + ${i} = ${result}\n`
   }
 
-  fs.writeFileSync(`outputs/tabla-${num}.txt`, content);
+  const outputPath = 'outputs'
+
+  fs.mkdirSync(outputPath, { recursive: true });
+  fs.writeFileSync(`${outputPath}/tabla-${num}.txt`, content);
   console.log('Archivo creado!');
   
 
