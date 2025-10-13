@@ -20,7 +20,9 @@ export class CreateTable implements CreateTableUseCase{
     let content = '';
     for (let i = 1; i <= limit ; i++){
       const result = base * i;
-      content += `${base} + ${i} = ${result}\n`
+      content += `${base} x ${i} = ${result}`
+
+      if(i < limit) content += '\n';
     }
 
     return content;
