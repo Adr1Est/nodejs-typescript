@@ -1,25 +1,22 @@
-import { CronJob } from "cron";
+import { CronJob } from 'cron';
 
 type CronTime = string | Date;
 type OnTick = () => void;
 
-export class CronService {
 
-  static createJob(cronTime: CronTime, onTick: OnTick){
+export class CronService  {
 
-    const job = new CronJob(cronTime, onTick);
-    //   '*/3 * * * * *', // cronTime
-    //   () => {
-    //     const date = new Date();
-    //     console.log(`3 seconds ${date}`);
-    //   }, // onTick
-    //   null, // onComplete
-    //   true, // start
-    //   'America/Los_Angeles' // timeZone
-    // ); Sin patrón adaptador
 
+  static createJob( cronTime: CronTime, onTick: OnTick ): CronJob {
+
+    const job = new CronJob( cronTime,onTick );
+    
     job.start();
-
+    
     return job;
+
   }
+
+
 }
+
