@@ -26,8 +26,14 @@ export class Server {
     //* Public Folder
     this.app.use( express.static( this.publicPath ));
 
-
-
+    //* Routes
+    this.app.get('/api/todos', (req, res) => {
+      return res.json([
+        { id: 1, text: 'Comprar leche', createdAt: new Date() },
+        { id: 2, text: 'Aprender Express', createdAt: new Date() },
+        { id: 3, text: 'Aprender Docker', createdAt: new Date() },
+      ]);
+    });
 
     this.app.get(/.*/, (req, res) => {
       const indexPath = path.join(__dirname + `../../../${this.publicPath}/index.html`);
