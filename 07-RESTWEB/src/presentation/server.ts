@@ -25,6 +25,8 @@ export class Server {
   async start(){
 
     //* Middlewares: Funciones que se ejecutan cada vez que se pasa por una ruta.
+    this.app.use(express.json()); // raw
+    this.app.use(express.urlencoded({ extended: true })); // x-www-form-urlencoded
 
     //* Public Folder
     this.app.use( express.static( this.publicPath ));
