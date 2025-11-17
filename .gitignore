@@ -1,5 +1,6 @@
 node_modules/
 dist/
+build/
 keys/
 
 .env
@@ -10,6 +11,6 @@ keys/
 
 coverage/
 
-mongo/
-postgres/
+/mongo
+/postgres
 prisma/
